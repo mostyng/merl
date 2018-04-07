@@ -19,9 +19,17 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 
+@font-face{
+  font-family: "FGrotesk-Regular";
+  src: url("FGrotesk-Regular.otf") format("otf");
+}
+
 html{
 	background: black;
 	color: white;
+	  font-family: "FGrotesk-Regular";
+	  font-size: 21pt;
+
 }
 
 .logo{
@@ -31,27 +39,41 @@ html{
 	margin-top: 3%;
 }
 
-.smallText{
-	font-size: 14px;
-	font-family: Helvetica;
-	font-weight: 500;
+.intro{
+	width: 60%;
+	right: 0;
+	position: absolute;
+	bottom: 0;
+	padding-bottom: 3%;
+	padding-right: 3%;
 }
 
-.left{
-	width: 50%;
-	float: left;
-	left: 3%;
-	bottom: 5%;
+.nav{
 	position: absolute;
+	width: 3%;
+	bottom: 0;
+	padding-bottom: 3%;
+	padding-left: 2%;
 }
 
-.right{
-	width: 50%;
-	float: right;
-	right: 3%;
-	bottom: 5%;
-	position: absolute;
-	text-align: right;
+a{
+	color: #6C00E9;
+	text-decoration: none;
+}
+
+a:hover{
+	color: white;
+	text-decoration: underline;
+}
+
+ul{
+	text-align: center;
+	font-size: 21pt;
+	list-style-type: none;
+}
+
+li{
+	padding-bottom: 30%;
 }
 
 p{
