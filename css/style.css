@@ -1,0 +1,100 @@
+@font-face
+{
+	font-family: fgrotesk;
+	src: url(../fonts/FGrotesk-Regular.otf);
+}
+
+*
+{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html
+{
+	background: url(../images/merl_landingpage_dark.png) no-repeat;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+body
+{
+	/*	background:black;*/
+}
+
+
+/*
+landing page css
+*/
+
+.landing-page
+{
+	height: 100vh;
+	margin: 20pt 50pt 0 90pt;
+}
+
+.merl-hero
+{
+	margin: 0 0 50pt 0;
+	
+}
+
+.welcome-text
+{
+	color: white;
+	font-family: fgrotesk;
+	font-size: 1.6em;
+	width: 550pt;
+	float: right;
+	position: absolute;
+	bottom: 20pt;
+	right: 50pt;
+}
+
+.numbers
+{
+	color:white;
+	font-size: 4em;
+	font-family: fgrotesk;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	position: fixed;
+	top: 20pt;
+	left: 20pt;
+	height: calc(100vh - 40pt);
+	max-height: 
+}
+
+.number
+{
+	
+}
+
+.number:hover
+{
+	color:yellow;
+	cursor: pointer;
+}
+
+.active
+{
+	color:yellow;
+}
+
+#number-1
+{
+
+}
+
+#number-2
+{
+	
+}
+
+#number-3
+{
+	
+}
+
