@@ -18,11 +18,23 @@ $(document).ready(function(){
 			// $(".footer_wrapper").css("width","calc(100% - 60px)");
 			$(".footer").css("background","black");
 			$(".footer_wrapper").attr('id', 'scrolled_footer');
+
+			$(".footer_up").show();
 		}
 		else{
+			$(".footer_up").hide();
+
 			$(".landing_img_hero").show();
 			$(".nav").show();
 			$(".footer_wrapper").removeAttr('id', "scrolled_footer");
 		}
 	});
+
+
+	$('.footer_up').each(function(){
+    $(this).click(function(){ 
+        $('html,body').animate({ scrollTop: 0 }, 'slow');
+        return false; 
+    });
+});
 });

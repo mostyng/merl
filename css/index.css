@@ -9,6 +9,11 @@
 }
 
 @font-face{
+	src:url(../fonts/cigars-light-webfont.otf);
+	font-family: cigars;
+}
+
+@font-face{
 	src:url(../fonts/FGroteskThin-Regular.otf);
 	font-family: f_grotesk_thin;
 }
@@ -46,10 +51,10 @@ h3{
 	hyphens: auto;
 }
 
-#active_nav
+/*#active_nav
 {
 	text-decoration: underline;
-}
+}*/
 
 #active_nav > a
 {
@@ -216,17 +221,6 @@ hr
 	padding-bottom: 0;
 }
 
-.project
-{
-	/*flex: 1;*/
-	width: calc(((100vw - 60px)/3) - 20pt);
-	height: calc(((100vw - 60px)/3) - 20pt);
-	border-radius: 50%;
-	background: black;
-	transition: 0s;
-
-}
-
 
 /*///////////////////////////////////////////////////
 nav & footer css for the landing page of each project
@@ -308,7 +302,7 @@ nav
 
 .footer_caption
 {
-	padding-top: 30px;
+	padding-top: 15px;
 	font-family: f_grotesk;
 	text-transform: uppercase;
 	font-size: 10pt;
@@ -319,11 +313,16 @@ nav
 .footer_title
 {
 	font-family: works;
-	font-size: 23pt;
+	font-size: 30px;
 	font-weight: normal;
 	line-height: 00%;
 	font-weight: normal;
-	letter-spacing: 1px;
+	letter-spacing: 0.5px;
+}
+
+.footer_up{
+	padding-top: 45px;
+	cursor: pointer;
 }
 
 /*/////////
@@ -453,6 +452,12 @@ project css
 	.col_footer_large
 	{
 		flex: 2;
+	}
+
+	.col_footer_up
+	{
+		flex: 1;
+		float: right;
 	}
 
 	.col_small
