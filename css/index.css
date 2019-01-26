@@ -1,9 +1,4 @@
 @font-face{
-	src:url(../fonts/SuisseWorks-Book.otf);
-	font-family: works;
-}
-
-@font-face{
 	src:url(../fonts/FGroteskDemi-Regular.otf);
 	font-family: f_grotesk;
 }
@@ -47,29 +42,24 @@ a:hover
 	color: #CD00FF;
 }
 
-h3{
-	hyphens: auto;
-}
+p{
+	font-family: f_grotesk;
+	line-height: 140%;
+	font-size: 11pt;
 
-/*#active_nav
-{
-	text-decoration: underline;
-}*/
-
-#active_nav > a
-{
-	color:#CD00FF;
 }
 
 /*/////////////////////////////////
 nav & footer css for the index page
 /////////////////////////////////*/
-.index_landing_container
-{
+
+
+#homeLogo{
 	position: absolute;
-	top:0px;
-	left: 30px;
-	width: calc(100% - 60px);
+	display: block;
+	width: 21%;
+	height: auto;
+	top: 30px;
 }
 
 .index_landing
@@ -77,154 +67,19 @@ nav & footer css for the index page
 	height: 10vh;
 }
 
-.index_landing_img_hero
-{
-	position: relative;
-	padding-top:0;
-	height: calc(100vh - 90px);
-	background: #3A72F2;
-	border-radius: 350pt;
-}
-
-/*////////////
-HERO IMAGE IDS
-////////////*/
-
-.svgHeroVert{
-	width: auto;
-	height: 75%;
-}
-
-.svgHeroHori{
-	width: 75%;
-	height: auto;
-}
-
-#himcHero{
-	background-image: url(../images/himc/HIMC_BG.png);
-}
-#sigmaHero{
-	background-image: url(../images/sigma/SIGMA_BG.png);
-}
-#ladderHero{
-	background-image: url(../images/ladder/LL_BG.png);
-}
-#raidHero{
-	background-image: url(../images/raid/RAID_BG.png);
-}
-#flagsHero{
-	background-image: url(../images/flags/flags.gif);
-}
-#jigHero{
-	background-image: url(../images/justice/JIG_BG.jpg);
-}
-#finnestHero{
-	background-image: url(../images/finnest/Finnest_HERO.svg);
-}
-#indexHero{
-	background: url(../images/index/06050026.jpg) no-repeat center center fixed; 
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-}
-
-
-
-/*/////////////////////////////////
-nav & footer css for the about page
-/////////////////////////////////*/
 .about_body
 {
-
-	font-family: f_grotesk;
-	font-size: 11pt;
-	font-weight: lighter;
 	padding-right: 20pt;
-	line-height: 140%;
-	
+	flex: 3;
 }
 
-.about_img_hero
+.about_title
 {
-	position: relative;
-	padding-top:0;
-	height: calc(100vh - 250px);
-	background: #3A72F2;
+	text-transform: uppercase;
+	letter-spacing: 1.25px;
+	flex: 1;
 }
 
-/*////////////////////////////
-css for the project index page
-////////////////////////////*/
-.project
-{
-	/*flex: 1;*/
-	width: calc(((100vw - 60px)/3) - 20pt);
-	height: calc(((100vw - 60px)/3) - 20pt);
-	border-radius: 50%;
-	background: black;
-	transition: 0s;
-
-	display: flex;
-	justify-content: center;
-	align-items: center;
-
-	background-size: auto 100%;
-	background-origin: center;
-	background-repeat: no-repeat;
-
-}
-
-.projects_row
-{
-	display: flex;
-	padding-bottom: 30px;
-	justify-content: space-between;
-}
-
-.row_side_by_side
-{
-	display: block;
-	padding-bottom: 30px;
-}
-
-.poster_side_by_side_container
-{
-	display: flex;
-	justify-content: space-between;
-
-}
-
-.poster_side_by_side{
-	width:50%;
-	height: 50%;
-}
-
-.poster_side_by_side_himc
-{
-	width:33%;
-	height: 50%;
-}
-
-hr
-{
-	margin-top: 32pt;
-}
-
-#first_project_row
-{
-	margin-top: 30pt;
-}
-
-#last_project_row
-{
-	padding-bottom: 0;
-}
-
-
-/*///////////////////////////////////////////////////
-nav & footer css for the landing page of each project
-///////////////////////////////////////////////////*/
 .project_landing_container
 {
 	position: absolute;
@@ -237,57 +92,22 @@ nav & footer css for the landing page of each project
 {
 	position: relative;
 	padding-top:0;
-	height: 100vh;
-}
-
-nav
-{
-	display: flex;
-	justify-content: space-between;
-}
-
-.nav_header
-{
-	font-family: f_grotesk;
-	font-size: 10pt;
-	letter-spacing: 1.25px;
-}
-
-.landing_img_hero
-{
-	width: 100%;
-	height: calc(100vh - 165px);
-	background: black;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-
-	background-size: cover;
-	background-origin: center;
-	background-repeat: no-repeat;
+/*	height: 100vh;*/
 }
 
 .footer_wrapper
 {
-	position: absolute;
-	bottom: 25px;
+	position: relative;
+	top: 25px;
 	left: 0;
 	width: 100%;
 	transition: all 0s;
 }
 
-#scrolled_footer
-{
-	position: fixed;
-	top: -15px;
-	margin: 0 30px;
-	width: calc(100% - 60px);
-}
-
 .footer
 {
 	display: flex;
-	transition: all 0s;	
+	transition: all 0s;
 }
 
 .col_footer
@@ -300,135 +120,24 @@ nav
 	flex: 2;
 }
 
-.footer_caption
-{
-	padding-top: 15px;
-	font-family: f_grotesk;
-	text-transform: uppercase;
-	font-size: 10pt;
-	font-weight: normal;
-	letter-spacing: 1.25px;
+.col_double{
+	display: flex;
 }
 
-.footer_title
-{
-	font-family: works;
-	font-size: 30px;
-	font-weight: normal;
-	line-height: 00%;
-	font-weight: normal;
-	letter-spacing: 0.5px;
-}
 
 .footer_up{
 	padding-top: 45px;
 	cursor: pointer;
 }
 
-/*/////////
-project css
-//////////*/
-.previous
-{
-	position: absolute;
-	z-index: 1000;
-	top: 30px;
-	left: 30px;
-	width: 50%;
-	height: calc(100% - 160px);
-	cursor: url("arrow_left.png") 50 30, auto;
-	background-blend-mode: difference;
-
-}
-
-.next
-{
-	position: absolute;
-	z-index: 1000;
-	top: 30px;
-	right: 30px;
-	width: 50%;
-	height: calc(100% - 160px);
-	cursor: url("arrow_right.png") 50 30, auto;
-	background-blend-mode: difference;
-}
-
-.row
-{
-	display: flex;
-	padding-bottom: 30px;
-}
-
-.col_small
-{
-	flex: 1;
-}
-
-.col_half
-{
-	flex: 2;
-}
-
-.col_medium
-{
-	flex: 3;
-}
-
-.col_large
-{
-	flex: 4;
-}
-
-.hero_text
-{
-	font-weight: normal;
-	font-family: f_grotesk_thin;
-	font-size: 36pt;
-	line-height: 130%;
-	hyphens: none;
-
-}
-
-.project_hero_img
-{
-	width: 100%;
-	height: auto;
-}
-
-.project_half_img
-{
-	width: 50%;
-	height: auto;
-}
-
-.padding_for_project_section
-{
-	height: 100vh;
-}
 
 @media only screen and (max-width: 1600px) {
-	.footer_title
-	{	
-		font-size: 20pt;
-	}
 
-	.hero_text
-	{
-		font-size: 36pt;
-	}
+
 }
 
 
 @media only screen and (max-width: 1270px) {
-	.footer_title
-	{	
-		font-size: 16pt;
-	}
-
-	.hero_text
-	{
-		font-size: 24pt;
-	}
 
 	.landing_img_hero
 	{
@@ -437,16 +146,31 @@ project css
 }
 
 @media only screen and (max-width: 900px) {
+	
+	p{
+		font-size: 10pt;
+	}
+
+	#homeLogo{
+		position: relative;
+		display: block;
+		width: 21%;
+		height: auto;
+		top: 30px;
+	}
+
 	.footer
 	{	
 		display: block;
-		-webkit-filter: invert(100%); /* Safari 6.0 - 9.0 */
-		filter: invert(100%);
+	}
+
+	.footer_wrapper
+	{
+		top: 50px;
 	}
 
 	.col_footer
 	{
-		block:1;
 	}
 
 	.col_footer_large
@@ -454,32 +178,12 @@ project css
 		flex: 2;
 	}
 
-	.col_footer_up
-	{
-		flex: 1;
-		float: right;
-	}
-
-	.col_small
-	{
-		display: none;
-	}
-
-	.landing_img_hero
-	{
-		height: calc(100vh - 330px);
-	}
-
-	.landing_img_hero
-	{
-		width: 200%;
-		margin-left: -30px;
-		height: calc(100vh - 44px);
-		background: #3A72F2;
-	}
-
-
 }
 
+@media only screen and (max-width: 720px) {
 
+	p{
+		font-size: 9pt;
+	}
 
+}
