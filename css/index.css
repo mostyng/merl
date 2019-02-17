@@ -13,11 +13,11 @@
 	font-family: f_grotesk_thin;
 }
 
-*
+/**
 {
 	transition: .2s;
 }
-
+*/
 body
 {
 	overflow-x: hidden;
