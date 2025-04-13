@@ -1,33 +1,38 @@
 @font-face{
-	src:url(../fonts/FGroteskDemi-Regular.otf);
-	font-family: f_grotesk;
+	src:url(../fonts/SuisseIntl-Regular.otf);
+	font-family: suisse-regular
 }
 
 @font-face{
-	src:url(../fonts/cigars-light-webfont.otf);
-	font-family: cigars;
+	src:url(../fonts/SuisseIntl-Light.otf);
+	font-family: suisse-light;
 }
 
 @font-face{
-	src:url(../fonts/FGroteskThin-Regular.otf);
-	font-family: f_grotesk_thin;
+	src:url(../fonts/SuisseIntl-Bold.otf);
+	font-family: suisse-bold;
 }
 
-/**
+
+* {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+   }
+
+html, body
 {
-	transition: .2s;
-}
-*/
-body
-{
-	overflow-x: hidden;
+/*	overflow-x: hidden;*/
 	background: black;
-	color: white;
-	padding: 30px;
-	padding-top: 0px;
+	color: whitesmoke;
 	margin: 0;
 	-webkit-font-smoothing: antialiased;
 	text-rendering: optimizeLegibility;
+	font-family: suisse-regular;
+
+	height: 100%;
+	overflow: hidden;
+
 }
 
 a
@@ -39,28 +44,70 @@ a
 a:hover
 {
 	text-decoration: underline;
-	color: #CD00FF;
+	color: royalblue;
 }
 
 p{
-	font-family: f_grotesk;
 	line-height: 140%;
 	font-size: 11pt;
 
 }
 
-/*/////////////////////////////////
-nav & footer css for the index page
-/////////////////////////////////*/
+h1{
+	font-size: 64px;
+	font-family: suisse-light;
+	font-weight: lighter;
+	letter-spacing: -2.5px;
+	padding-top: 20px;
+	color: whitesmoke;
+}
 
+.contacth1{
+	text-align: right;
+}
 
-#homeLogo{
+.gallery{
+	height: 100vh;
+	width: auto;
+}
+
+.homeLogo{
 	position: absolute;
 	display: block;
-	width: 21%;
 	height: auto;
 	top: 30px;
 }
+
+.project_landing-2{
+	display: flex;
+	position: absolute;
+	justify-content: space-between;
+	width: 100%;
+	height: 120px;
+
+
+}
+
+.project_landing_container
+{
+	position: absolute;
+	top:0px;
+	left: 30px;
+	width: calc(100% - 60px);
+	z-index: 1;
+}
+
+
+.nav-item{
+	flex: 1;
+}
+
+.homeLogo.contact{
+	float: right;
+	right: 0px;
+}
+
+
 
 .index_landing
 {
@@ -78,14 +125,6 @@ nav & footer css for the index page
 	text-transform: uppercase;
 	letter-spacing: 1.25px;
 	flex: 1;
-}
-
-.project_landing_container
-{
-	position: absolute;
-	top:0px;
-	left: 30px;
-	width: calc(100% - 60px);
 }
 
 .project_landing
@@ -131,6 +170,141 @@ nav & footer css for the index page
 }
 
 
+.contact-p{
+	margin-top: 120px;
+}
+
+
+.header h1{
+	
+}
+
+.contact-p p{
+	font-size: 64px;
+	font-family: suisse-light
+}
+
+	
+
+    .carousel-container {
+    z-index: -1;
+      display: flex;
+      width: 300vw;
+      height: 100vh;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    /*.slide {
+      width: 100vw;
+      height: 100vh;
+      flex-shrink: 0;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }*/
+
+    .slide {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: black;
+      overflow: hidden;
+    }
+
+    .slide img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+
+    /* Slide images */
+    #slide1:target ~ .carousel-container {
+      transform: translateX(0);
+    }
+
+    #slide2:target ~ .carousel-container {
+      transform: translateX(-100vw);
+    }
+
+    #slide3:target ~ .carousel-container {
+      transform: translateX(-200vw);
+    }
+
+    #slide4:target ~ .carousel-container {
+      transform: translateX(-300vw);
+    }
+
+    #slide5:target ~ .carousel-container {
+      transform: translateX(-400vw);
+    }
+    /*#slide6:target ~ .carousel-container {
+      transform: translateX(-500vw);
+    }*/
+
+
+    /*#s1 {
+      background-image: url('../images/content/merl-tc.png');
+    }
+
+    #s2 {
+      background-image: url('../images/content/merl-card.png');
+    }
+
+    #s3 {
+      background-image: url('../images/content/merl-kembara.png');
+    }
+
+    #s4 {
+      background-image: url('../images/content/merl-muse.png');
+    }
+
+    #s5 {
+      background-image: url('../images/content/merl-jig.png');
+    }*/
+
+    /*#s6 {
+      background-image: url('../images/content/merl-finn.png');
+    }*/
+
+
+    .nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 2rem;
+      color: white;
+      text-decoration: none;
+      font-family: suisse-light;
+      font-weight: lighter;
+      padding: .5rem;
+      z-index: 10;
+      background: rgba(0,0,0,0.15);
+      border-radius: 10%;
+    }
+
+    .prev { left: 20px; }
+    .next { right: 20px; }
+
+
+    .arrow-mobile {
+      display: none;
+    }
+    .arrow-desktop {
+      display: inline;
+    }
+
+
+
+
+
+
+
+
+
 @media only screen and (max-width: 1600px) {
 
 
@@ -146,10 +320,20 @@ nav & footer css for the index page
 }
 
 @media only screen and (max-width: 900px) {
-	
-	p{
-		font-size: 10pt;
+
+	h1{
+		font-size:32px;
+		letter-spacing: -1px;
 	}
+
+	p{
+		font-size: 32px;
+	}
+
+	.contact-p p{
+		font-size: 32px;
+	}
+
 
 	#homeLogo{
 		position: relative;
@@ -180,10 +364,85 @@ nav & footer css for the index page
 
 }
 
-@media only screen and (max-width: 720px) {
+@media only screen and (max-width: 640px) {
 
-	p{
-		font-size: 9pt;
+
+	h1{
+		font-size:24px;
+		letter-spacing: -0.5px;
 	}
+	p{
+		font-size: 24px;
+	}
+	.contact-p p{
+		font-size: 24px;
+	}
+
+	.project_landing-2{
+		height: 0;
+	}
+
+	.carousel-container {
+		     flex-direction: column;
+		     width: 100vw;
+		     height: 300vh;
+		   }
+
+		   .slide {
+		     width: 100vw;
+		     height: 100vh;
+		   }
+
+
+		   /* Slide transitions (mobile vertical) */
+		   #slide1:target ~ .carousel-container {
+		     transform: translateY(0);
+		   }
+
+		   #slide2:target ~ .carousel-container {
+		     transform: translateY(-100vh);
+		   }
+
+		   #slide3:target ~ .carousel-container {
+		     transform: translateY(-200vh);
+		   }
+
+		   #slide4:target ~ .carousel-container {
+		     transform: translateY(-300vh);
+		   }
+
+		   #slide5:target ~ .carousel-container {
+		     transform: translateY(-400vh);
+		   }
+
+		   /*#slide6:target ~ .carousel-container {
+		     transform: translateY(-500vh);
+		   }*/
+
+
+		   .arrow-mobile {
+		     display: inline;
+		     z-index: 12;
+		   }
+		   .arrow-desktop {
+		     display: none;
+		     z-index: 12;
+		   }
+
+		   .prev {
+		     top: 60px;
+		     bottom: auto;
+		     left: 50%;
+		     transform: translateX(-50%);
+		   }
+
+		   .next {
+		     bottom: 20px;
+		     top: auto;
+		     right: 43%;
+		     transform: translateX(-50%);
+		   }
+
+	   
 
 }
