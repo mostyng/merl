@@ -57,7 +57,7 @@ h1{
 	font-size: 64px;
 	font-family: suisse-light;
 	font-weight: lighter;
-	letter-spacing: -2.5px;
+	letter-spacing: -2px;
 	padding-top: 20px;
 	color: whitesmoke;
 }
@@ -175,12 +175,10 @@ h1{
 }
 
 
-.header h1{
-	
-}
 
 .contact-p p{
 	font-size: 64px;
+	letter-spacing: -2.0px;
 	font-family: suisse-light
 }
 
@@ -332,6 +330,7 @@ h1{
 
 	.contact-p p{
 		font-size: 32px;
+		letter-spacing: -1px;
 	}
 
 
@@ -376,6 +375,7 @@ h1{
 	}
 	.contact-p p{
 		font-size: 24px;
+		letter-spacing: -0.5px;
 	}
 
 	.project_landing-2{
