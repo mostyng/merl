@@ -38,7 +38,7 @@ html, body
 a
 {
 	text-decoration: none;
-	color: white;
+	color: violet;
 }
 
 a:hover
@@ -57,9 +57,13 @@ h1{
 	font-size: 64px;
 	font-family: suisse-light;
 	font-weight: lighter;
-	letter-spacing: -2px;
+	letter-spacing: -1.5px;
 	padding-top: 20px;
 	color: whitesmoke;
+}
+
+video{
+
 }
 
 .contacth1{
@@ -178,8 +182,10 @@ h1{
 
 .contact-p p{
 	font-size: 64px;
-	letter-spacing: -2.0px;
-	font-family: suisse-light
+	letter-spacing: -1.5px;
+	font-family: suisse-light;
+	text-rendering: optimizeLegibility;
+	text-wrap: pretty;
 }
 
 	
@@ -219,6 +225,13 @@ h1{
       object-fit: contain;
     }
 
+    .slide video{
+    	max-width: 100%;
+    	max-height: 100%;
+    	object-fit: contain;
+
+    }
+
     /* Slide images */
     #slide1:target ~ .carousel-container {
       transform: translateX(0);
@@ -239,34 +252,43 @@ h1{
     #slide5:target ~ .carousel-container {
       transform: translateX(-400vw);
     }
-    /*#slide6:target ~ .carousel-container {
+    #slide6:target ~ .carousel-container {
       transform: translateX(-500vw);
-    }*/
-
-
-    /*#s1 {
-      background-image: url('../images/content/merl-tc.png');
     }
 
-    #s2 {
-      background-image: url('../images/content/merl-card.png');
+    .slide-anchor {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 0;
+      overflow: hidden;
+      pointer-events: none;
     }
 
-    #s3 {
-      background-image: url('../images/content/merl-kembara.png');
+
+    .carousel-dots {
+      position: absolute;
+      bottom: 56px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 12px;
+      z-index: 5;
     }
 
-    #s4 {
-      background-image: url('../images/content/merl-muse.png');
+    .dot {
+      width: 12px;
+      height: 12px;
+      background: rgba(255,255,255,0.5);
+      border-radius: 50%;
+      display: inline-block;
+      transition: background 0.3s;
     }
 
-    #s5 {
-      background-image: url('../images/content/merl-jig.png');
-    }*/
-
-    /*#s6 {
-      background-image: url('../images/content/merl-finn.png');
-    }*/
+    .dot.active {
+      background: white;
+    }
 
 
     .nav {
@@ -290,9 +312,11 @@ h1{
 
     .arrow-mobile {
       display: none;
+      z-index: 12;
     }
     .arrow-desktop {
       display: inline;
+      z-index: 12;
     }
 
 
@@ -311,11 +335,12 @@ h1{
 
 @media only screen and (max-width: 1270px) {
 
-	.landing_img_hero
+/*	.landing_img_hero
 	{
 		height: calc(100vh - 150px);
 	}
 }
+*/
 
 @media only screen and (max-width: 900px) {
 
@@ -360,6 +385,8 @@ h1{
 	{
 		flex: 2;
 	}
+
+
 
 }
 
@@ -415,18 +442,16 @@ h1{
 		     transform: translateY(-400vh);
 		   }
 
-		   /*#slide6:target ~ .carousel-container {
+		   #slide6:target ~ .carousel-container {
 		     transform: translateY(-500vh);
-		   }*/
+		   }
 
 
 		   .arrow-mobile {
 		     display: inline;
-		     z-index: 12;
 		   }
 		   .arrow-desktop {
 		     display: none;
-		     z-index: 12;
 		   }
 
 		   .prev {
@@ -441,6 +466,10 @@ h1{
 		     top: auto;
 		     right: 40%;
 		     transform: translateX(-50%);
+		   }
+
+		   .carousel-dots {
+		   	display: none;
 		   }
 
 	   

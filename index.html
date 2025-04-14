@@ -13,6 +13,91 @@
 
 </head>
 <body>
+
+	<script>
+		document.addEventListener("DOMContentLoaded", function () {
+		  const slideIds = ['slide1', 'slide2', 'slide3', 'slide4', 'slide5', 'slide6'];
+		  let current = 0;
+		  let intervalId;
+		  let autoplayActive = true;
+
+		  const carouselContainer = document.querySelector('.carousel-container');
+		  const dots = document.querySelectorAll('.dot');
+		  const navLinks = document.querySelectorAll('.nav');
+
+		  function goToSlide(index) {
+		    current = (index + slideIds.length) % slideIds.length;
+		    const targetId = slideIds[current];
+		    location.href = `#${targetId}`;  // ✅ this triggers :target behavior
+		    updateDots();
+		  }
+
+		  function updateDots() {
+		    dots.forEach(dot => dot.classList.remove('active'));
+		    dots[current].classList.add('active');
+		  }
+
+		  function startAutoplay() {
+		    intervalId = setInterval(() => {
+		      if (autoplayActive) {
+		        goToSlide(current + 1);
+		      }
+		    }, 3000);
+		  }
+
+		  function stopAutoplay() {
+		    autoplayActive = false;
+		    clearInterval(intervalId);
+		  }
+
+		  // Pause autoplay on arrow click
+		  navLinks.forEach(link => {
+		    link.addEventListener('click', () => {
+		      stopAutoplay();
+		    });
+		  });
+
+		  // Dot click listener
+		  dots.forEach(dot => {
+		    dot.addEventListener('click', (e) => {
+		      const index = parseInt(e.target.getAttribute('data-index'), 10);
+		      goToSlide(index);
+		      stopAutoplay();
+		    });
+		  });
+
+		  // Swipe support
+		  let startY = 0;
+		  let endY = 0;
+
+		  carouselContainer.addEventListener('touchstart', (e) => {
+		    startY = e.touches[0].clientY;
+		  });
+
+		  carouselContainer.addEventListener('touchend', (e) => {
+		    endY = e.changedTouches[0].clientY;
+		    const deltaY = endY - startY;
+		    if (Math.abs(deltaY) > 50) {
+		      stopAutoplay();
+		      if (deltaY > 0) {
+		        goToSlide(current - 1);
+		      } else {
+		        goToSlide(current + 1);
+		      }
+		    }
+		  });
+
+		  // Init
+		  goToSlide(0);
+		  startAutoplay();
+		});
+
+		// setTimeout(() => {
+		//   target.scrollIntoView();
+		// }, 0);
+	</script>
+
+
 	<section class="project_landing_container">
 		<div class="project_landing-2">
 				<div class="nav-item header">
@@ -34,18 +119,25 @@
 		
 	</section>
 	<section class="gallery">
-		
-		<div id="slide1"></div>
-		<div id="slide2"></div>
-		<div id="slide3"></div>
-		<div id="slide4"></div>
-		<div id="slide5"></div>
-		<div id="slide6"></div>
 
+		<!-- Slide anchors (for CSS :target use) -->
+		<div id="slide1" class="slide-anchor"></div>
+		<div id="slide2" class="slide-anchor"></div>
+		<div id="slide3" class="slide-anchor"></div>
+		<div id="slide4" class="slide-anchor"></div>
+		<div id="slide5" class="slide-anchor"></div>
+		<div id="slide6" class="slide-anchor"></div>
+
+
+
+
+		<!-- Carousel wrapper -->
 		<div class="carousel-container">
 		  <div class="slide" id="s1">
-		  	<img src="images/content/merl-tc.jpg" alt="Slide 1">
+		  	<img src="images/content/merl-card.jpg" alt="Slide 1">
+
 		    <a href="#slide1" class="nav prev">
+
 		    	<!-- <span class="arrow-desktop">&#10094;</span>-->
 		    	<!-- <span class="arrow-mobile">&#8593;</span> -->
 		    </a>
@@ -53,11 +145,10 @@
 		    	<span class="arrow-desktop">&#10095;</span> <!-- Right arrow -->
 		    	<span class="arrow-mobile">&#8595;</span>   <!-- Down arrow -->
 		    </a>
-		    
-
 		  </div>
+
 		  <div class="slide" id="s2">
-		  	<img src="images/content/merl-card.jpg" alt="Slide 1">
+		  	<img src="images/content/merl-tc.jpg" alt="Slide 2">
 
 		    <a href="#slide1" class="nav prev">
 		    	<span class="arrow-desktop">&#10094;</span>
@@ -68,8 +159,9 @@
 		    	<span class="arrow-mobile">&#8595;</span>   <!-- Down arrow -->
 		    </a>
 		  </div>
+
 		  <div class="slide" id="s3">
-		  	<img src="images/content/merl-kembara.jpg" alt="Slide 1">
+		  	<video src="images/content/merl-carde.webm" autoplay muted alt="Slide 3"></video>
 
 		    <a href="#slide2" class="nav prev">
 		    	<span class="arrow-desktop">&#10094;</span>
@@ -80,8 +172,9 @@
 		    	<span class="arrow-mobile">&#8595;</span>   <!-- Down arrow -->
 		    </a>
 		  </div>
+
 		  <div class="slide" id="s4">
-		  	<img src="images/content/merl-muse.jpg" alt="Slide 1">
+		  	<img src="images/content/merl-floral.jpg" alt="Slide 4">
 
 		    <a href="#slide3" class="nav prev">
 		    	<span class="arrow-desktop">&#10094;</span>
@@ -92,8 +185,9 @@
 		    	<span class="arrow-mobile">&#8595;</span>   <!-- Down arrow -->
 		    </a>
 		  </div>
+
 		  <div class="slide" id="s5">
-		  	<img src="images/content/merl-jig.jpg" alt="Slide 1">
+		  	<img src="images/content/merl-kembara.jpg" alt="Slide 5">
 
 		    <a href="#slide4" class="nav prev">
 		    	<span class="arrow-desktop">&#10094;</span>
@@ -104,19 +198,35 @@
 		    	<span class="arrow-mobile">&#8595;</span>   <!-- Down arrow -->
 		    </a>
 		  </div>
-		  <div class="slide" id="s6">
-		  		<img src="images/content/merl-carde.jpg" alt="Slide 1">
 
-		  	  <a href="#slide4" class="nav prev">
+		  <div class="slide" id="s6">
+		  	<img src="images/content/merl-muse.jpg" alt="Slide 6">
+
+		  	  <a href="#slide5" class="nav prev">
 		  	  	<span class="arrow-desktop">&#10094;</span>
 		  	  	<span class="arrow-mobile">&#8593;</span>
 		  	  </a>
-		  	  <a href="#slide6" class="nav next">
+		  	  <a href="#slide1" class="nav next">
 		  	  	<span class="arrow-desktop">&#10095;</span> <!-- Right arrow -->
 		  	  	<span class="arrow-mobile">&#8595;</span>   <!-- Down arrow -->
-		  	  </a>		  </div>
+		  	  </a>		  
+		  	</div>
 		</div>
 
+		<!-- Dot Indicators -->
+		  <div class="carousel-dots">
+		    <a href="#slide1" class="dot" data-index="0"></a>
+		    <a href="#slide2" class="dot" data-index="1"></a>
+		    <a href="#slide3" class="dot" data-index="2"></a>
+		    <a href="#slide1" class="dot" data-index="3"></a>
+		    <a href="#slide2" class="dot" data-index="4"></a>
+		    <a href="#slide3" class="dot" data-index="5"></a>
+
+		  </div>
+
 	</section>
+
+
+
 </body>
 </html>
