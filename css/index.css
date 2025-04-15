@@ -256,6 +256,10 @@ video{
       transform: translateX(-500vw);
     }
 
+    #slide7:target ~ .carousel-container {
+      transform: translateX(-600vw);
+    }
+
     .slide-anchor {
       position: absolute;
       top: 0;
@@ -417,7 +421,7 @@ video{
 
 		   .slide {
 		     width: 100vw;
-		     height: 100vh;
+		     height: 50vh;
 		   }
 
 
@@ -427,28 +431,32 @@ video{
 		   }
 
 		   #slide2:target ~ .carousel-container {
-		     transform: translateY(-100vh);
+		     transform: translateY(-50vh);
 		   }
 
 		   #slide3:target ~ .carousel-container {
-		     transform: translateY(-200vh);
+		     transform: translateY(-100vh);
 		   }
 
 		   #slide4:target ~ .carousel-container {
-		     transform: translateY(-300vh);
+		     transform: translateY(-150vh);
 		   }
 
 		   #slide5:target ~ .carousel-container {
-		     transform: translateY(-400vh);
+		     transform: translateY(-200vh);
 		   }
 
 		   #slide6:target ~ .carousel-container {
-		     transform: translateY(-500vh);
+		     transform: translateY(-250vh);
+		   }
+
+		   #slide7:target ~ .carousel-container {
+		     transform: translateY(-300vh);
 		   }
 
 
 		   .arrow-mobile {
-		     display: inline;
+		     display: none;
 		   }
 		   .arrow-desktop {
 		     display: none;

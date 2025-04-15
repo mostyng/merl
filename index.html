@@ -16,7 +16,7 @@
 
 	<script>
 		document.addEventListener("DOMContentLoaded", function () {
-		  const slideIds = ['slide1', 'slide2', 'slide3', 'slide4', 'slide5', 'slide6'];
+		  const slideIds = ['slide1', 'slide2', 'slide3', 'slide4', 'slide5', 'slide6', 'slide7'];
 		  let current = 0;
 		  let intervalId;
 		  let autoplayActive = true;
@@ -127,12 +127,12 @@
 		<div id="slide4" class="slide-anchor"></div>
 		<div id="slide5" class="slide-anchor"></div>
 		<div id="slide6" class="slide-anchor"></div>
-
-
+		<div id="slide7" class="slide-anchor"></div>
 
 
 		<!-- Carousel wrapper -->
 		<div class="carousel-container">
+		  
 		  <div class="slide" id="s1">
 		  	<img src="images/content/merl-card.jpg" alt="Slide 1">
 
@@ -206,21 +206,39 @@
 		  	  	<span class="arrow-desktop">&#10094;</span>
 		  	  	<span class="arrow-mobile">&#8593;</span>
 		  	  </a>
-		  	  <a href="#slide1" class="nav next">
+		  	  <a href="#slide7" class="nav next">
 		  	  	<span class="arrow-desktop">&#10095;</span> <!-- Right arrow -->
 		  	  	<span class="arrow-mobile">&#8595;</span>   <!-- Down arrow -->
 		  	  </a>		  
 		  	</div>
+
+		  	<div class="slide" id="s7">
+		  	  	<img src="images/content/merl-jig.jpg" alt="Slide 7">
+
+		  	  	  <a href="#slide6" class="nav prev">
+		  	  	  	<span class="arrow-desktop">&#10094;</span>
+		  	  	  	<span class="arrow-mobile">&#8593;</span>
+		  	  	  </a>
+		  	  	  <a href="#slide1" class="nav next">
+		  	  	  	<span class="arrow-desktop">&#10095;</span> <!-- Right arrow -->
+		  	  	  	<span class="arrow-mobile">&#8595;</span>   <!-- Down arrow -->
+		  	  	  </a>		  
+		  	  	</div>
+		  	</div>
+		  	
 		</div>
+
+		
 
 		<!-- Dot Indicators -->
 		  <div class="carousel-dots">
 		    <a href="#slide1" class="dot" data-index="0"></a>
 		    <a href="#slide2" class="dot" data-index="1"></a>
 		    <a href="#slide3" class="dot" data-index="2"></a>
-		    <a href="#slide1" class="dot" data-index="3"></a>
-		    <a href="#slide2" class="dot" data-index="4"></a>
-		    <a href="#slide3" class="dot" data-index="5"></a>
+		    <a href="#slide4" class="dot" data-index="3"></a>
+		    <a href="#slide5" class="dot" data-index="4"></a>
+		    <a href="#slide6" class="dot" data-index="5"></a>
+		    <a href="#slide7" class="dot" data-index="5"></a>
 
 		  </div>
 
